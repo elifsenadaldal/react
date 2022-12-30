@@ -1,12 +1,19 @@
 import "./App.css";
 import Dashboard from "./layouts/Dashboard";
-import Header from "./layouts/Header";
+
+const name = "Adam";
+const surname = "Smith";
+const isLoggedIn = true;
 function App() {
   return (
-    <div>
-  
-      <Header/>
-    </div>
+    <>
+      <h1>
+        {isLoggedIn
+          ? `My name is ${name}, surname is ${surname} `
+          : "You cannot log in."}
+      </h1>
+      
+    </>
   );
 }
 
