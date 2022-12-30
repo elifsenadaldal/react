@@ -1,20 +1,20 @@
 import "./App.css";
-import Dashboard from "./layouts/Dashboard";
+import React from "react";
+import ReactDOM from 'react-dom';
 
-const name = "Adam";
-const surname = "Smith";
-const isLoggedIn = true;
 function App() {
-  return (
-    <>
-      <h1>
-        {isLoggedIn
-          ? `My name is ${name}, surname is ${surname} `
-          : "You cannot log in."}
-      </h1>
-      
-    </>
-  );
-}
+  const root = ReactDOM.createRoot(document.getElementById("root"));
 
+  function tick() {
+    const element = (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    root.render(element);
+  }
+
+  setInterval(tick, 1000);
+}
 export default App;
